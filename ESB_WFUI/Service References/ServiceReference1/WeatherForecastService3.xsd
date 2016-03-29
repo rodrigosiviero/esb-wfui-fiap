@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.restfulwebservices.net/ServiceContracts/Rest/2008/01" elementFormDefault="qualified" targetNamespace="http://www.restfulwebservices.net/ServiceContracts/Rest/2008/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?xsd=xsd3" namespace="http://www.restfulwebservices.net/DataContracts/2008/01" />
+  <xs:element name="GetCitiesByCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesByCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCitiesByCountryResult" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForecastByCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForecastByCityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://www.restfulwebservices.net/DataContracts/2008/01" minOccurs="0" name="GetForecastByCityResult" nillable="true" type="q2:Weather" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesByCountryJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesByCountryJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCitiesByCountryJsonResult" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForecastByCityJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForecastByCityJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://www.restfulwebservices.net/DataContracts/2008/01" minOccurs="0" name="GetForecastByCityJsonResult" nillable="true" type="q4:Weather" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

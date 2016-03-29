@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="176cb1e7-a586-4272-b1fa-c386342e623e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WeatherForecastService.xsd" MetadataType="Schema" ID="1b70fa2f-73c7-4421-b71d-860ebf131a0e" SourceId="1" SourceUrl="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?xsd=xsd3" />
+    <MetadataFile FileName="WeatherForecastService1.xsd" MetadataType="Schema" ID="5f0c9ae9-b18f-481b-a39f-bc47a3b3a9c1" SourceId="1" SourceUrl="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WeatherForecastService2.xsd" MetadataType="Schema" ID="e06c6a35-b4f6-40c3-a172-f173346bef37" SourceId="1" SourceUrl="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WeatherForecastService3.xsd" MetadataType="Schema" ID="92271445-9993-41cf-aae3-968182751528" SourceId="1" SourceUrl="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WeatherForecastService.wsdl" MetadataType="Wsdl" ID="d374eea9-0e0c-4ba5-afa8-f0580f722126" SourceId="1" SourceUrl="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?wsdl" />
+    <MetadataFile FileName="WeatherForecastService1.wsdl" MetadataType="Wsdl" ID="ec3477bc-68b3-40f7-bb24-69f8ce63c520" SourceId="1" SourceUrl="http://www.restfulwebservices.net/rest/WeatherForecastService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
