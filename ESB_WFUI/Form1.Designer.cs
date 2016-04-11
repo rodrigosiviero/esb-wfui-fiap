@@ -53,6 +53,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.idLabel = new System.Windows.Forms.Label();
+            this.idTexto = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // consultaBotao
@@ -82,6 +83,7 @@
             this.alteraBotao.TabIndex = 2;
             this.alteraBotao.Text = "Altera";
             this.alteraBotao.UseVisualStyleBackColor = true;
+            this.alteraBotao.Click += new System.EventHandler(this.alteraBotao_Click_1);
             // 
             // apagaBotao
             // 
@@ -91,6 +93,7 @@
             this.apagaBotao.TabIndex = 3;
             this.apagaBotao.Text = "Apaga";
             this.apagaBotao.UseVisualStyleBackColor = true;
+            this.apagaBotao.Click += new System.EventHandler(this.apagaBotao_Click_1);
             // 
             // nomeTexto
             // 
@@ -160,7 +163,7 @@
             // 
             this.nascimentoTexto.Location = new System.Drawing.Point(223, 33);
             this.nascimentoTexto.Name = "nascimentoTexto";
-            this.nascimentoTexto.Size = new System.Drawing.Size(50, 20);
+            this.nascimentoTexto.Size = new System.Drawing.Size(71, 20);
             this.nascimentoTexto.TabIndex = 13;
             // 
             // label2
@@ -262,11 +265,19 @@
             this.idLabel.TabIndex = 26;
             this.idLabel.Text = "ID:";
             // 
+            // idTexto
+            // 
+            this.idTexto.Location = new System.Drawing.Point(280, 189);
+            this.idTexto.Name = "idTexto";
+            this.idTexto.Size = new System.Drawing.Size(51, 20);
+            this.idTexto.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 261);
+            this.Controls.Add(this.idTexto);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -326,6 +337,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.TextBox idTexto;
     }
 }
 
