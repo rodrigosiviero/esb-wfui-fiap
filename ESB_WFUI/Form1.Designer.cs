@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.consultaBotao = new System.Windows.Forms.Button();
             this.inserirBotao = new System.Windows.Forms.Button();
             this.alteraBotao = new System.Windows.Forms.Button();
@@ -303,6 +304,7 @@
             this.Controls.Add(this.alteraBotao);
             this.Controls.Add(this.inserirBotao);
             this.Controls.Add(this.consultaBotao);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "ESB - UI";
             this.ResumeLayout(false);
