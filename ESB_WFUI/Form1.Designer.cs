@@ -75,6 +75,7 @@
             this.inserirBotao.TabIndex = 1;
             this.inserirBotao.Text = "Inserir";
             this.inserirBotao.UseVisualStyleBackColor = true;
+            this.inserirBotao.Click += new System.EventHandler(this.inserirBotao_Click_1);
             // 
             // alteraBotao
             // 

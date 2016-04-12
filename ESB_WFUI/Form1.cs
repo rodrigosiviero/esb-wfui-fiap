@@ -19,7 +19,7 @@ namespace ESB_WFUI
             InitializeComponent();
         }
 
-        //fucking Consulta
+        //Botao Consulta
         private void button1_Click(object sender, EventArgs e)
         {
             using (WebClient webClient = new System.Net.WebClient())
@@ -71,7 +71,7 @@ namespace ESB_WFUI
 
         }
 
-
+        //Botao Apagar
         private void apagaBotao_Click_1(object sender, EventArgs e)
         {
             using (WebClient webClient = new System.Net.WebClient())
@@ -108,7 +108,22 @@ namespace ESB_WFUI
                 //criando conexão
                 WebClient n = new WebClient();
                 //URL do mule local
-                var text = n.DownloadString("http://localhost:8081/?comandosql=apagar&usuarioID=" + idTexto.Text);
+                var text = n.DownloadString("http://localhost:8081/?comandosql=alterar&idusuario_soa=" + idTexto.Text + "&nome=" + nomeTexto.Text + "&data_nasc="+ nascimentoTexto.Text +"&endereco=" + enderecoTexto.Text + "&numero_end=" + numEndTexto.Text + "&end_complemento=" + endCompTexto.Text + "&cep="+ cepTexto.Text +"&cidade=" + cidadeTexto.Text + "&UF= " + estadoTexto.Text + "&telefone=" + foneTexto.Text + "&celular=" + celularTexto.Text);
+                //convertendo pra string just in case
+                string valorOriginal = Convert.ToString(text);
+                //debug
+                Console.WriteLine(valorOriginal);
+            }
+        }
+
+        private void inserirBotao_Click_1(object sender, EventArgs e)
+        {
+            using (WebClient webClient = new System.Net.WebClient())
+            {
+                //criando conexão
+                WebClient n = new WebClient();
+                //URL do mule local
+                var text = n.DownloadString("http://localhost:8081/&idusuario_soa=" + idTexto.Text + "&nome=" + nomeTexto.Text + "&data_nasc=" + nascimentoTexto.Text + "&endereco=" + enderecoTexto.Text + "&numero_end=" + numEndTexto.Text + "&end_complemento=" + endCompTexto.Text + "&cep=" + cepTexto.Text + "&cidade=" + cidadeTexto.Text + "&UF= " + estadoTexto.Text + "&telefone=" + foneTexto.Text + "&celular=" + celularTexto.Text);
                 //convertendo pra string just in case
                 string valorOriginal = Convert.ToString(text);
                 //debug
