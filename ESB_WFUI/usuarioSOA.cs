@@ -12,12 +12,12 @@ namespace ESB_WFUI
         public string end_complemento { get; set; }
         public string nome { get; set; }
         public string celular { get; set; }
-        public int cep { get; set; }
+        public string cep { get; set; }
         public string UF { get; set; }
         public string data_nasc { get; set; }
         public string telefone { get; set; }
         public int idusuario_soa { get; set; }
-        public int numero_end { get; set; }
+        public string numero_end { get; set; }
         public string cidade { get; set; }
         public string endereco { get; set; }
     }

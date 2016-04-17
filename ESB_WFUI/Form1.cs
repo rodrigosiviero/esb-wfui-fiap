@@ -19,6 +19,24 @@ namespace ESB_WFUI
             InitializeComponent();
         }
 
+        private void LimparCampos()
+
+        {
+
+            idTexto.Text = "";
+            nomeTexto.Text = "";
+            nascimentoTexto.Text = "";
+            enderecoTexto.Text = "";
+            numEndTexto.Text = "";
+            endCompTexto.Text = "";
+            cepTexto.Text = "";
+            cidadeTexto.Text = "";
+            estadoTexto.Text = "";
+            foneTexto.Text = "";
+            celularTexto.Text = "";
+            
+        }
+
         //Botao Consulta
         private void button1_Click(object sender, EventArgs e)
         {
@@ -41,13 +59,14 @@ namespace ESB_WFUI
                 nomeTexto.Text = usuario.nome;
                 nascimentoTexto.Text = usuario.data_nasc;
                 enderecoTexto.Text = usuario.endereco;
-                numEndTexto.Text = usuario.numero_end.ToString();
+                numEndTexto.Text = usuario.numero_end;
                 endCompTexto.Text = usuario.end_complemento;
-                cepTexto.Text = usuario.cep.ToString();
+                cepTexto.Text = usuario.cep;
                 cidadeTexto.Text = usuario.cidade;
                 estadoTexto.Text = usuario.UF;
                 foneTexto.Text = usuario.telefone;
                 celularTexto.Text = usuario.celular;
+                debugBox.Text = valorOriginal;
             }
         }
 
@@ -84,6 +103,7 @@ namespace ESB_WFUI
                 string valorOriginal = Convert.ToString(text);
                 //debug
                 Console.WriteLine(valorOriginal);
+                debugBox.Text = valorOriginal;
                 //Fazendo o parse com o Json.Net usando array
                 //usuarioSOA[] usuario_raw = JsonConvert.DeserializeObject<usuarioSOA[]>(json);
                 //usuarioSOA usuario = usuario_raw[0];
@@ -94,6 +114,7 @@ namespace ESB_WFUI
                 if (valorOriginal == "1")
                 {
                     MessageBox.Show("Usuario Apagado");
+                    LimparCampos();
                 } else {
                     MessageBox.Show("Erro");
                 }
@@ -113,6 +134,7 @@ namespace ESB_WFUI
                 string valorOriginal = Convert.ToString(text);
                 //debug
                 Console.WriteLine(valorOriginal);
+                debugBox.Text = valorOriginal;
             }
         }
 
@@ -123,12 +145,28 @@ namespace ESB_WFUI
                 //criando conexão
                 WebClient n = new WebClient();
                 //URL do mule local
-                var text = n.DownloadString("http://localhost:8081/&idusuario_soa=" + idTexto.Text + "&nome=" + nomeTexto.Text + "&data_nasc=" + nascimentoTexto.Text + "&endereco=" + enderecoTexto.Text + "&numero_end=" + numEndTexto.Text + "&end_complemento=" + endCompTexto.Text + "&cep=" + cepTexto.Text + "&cidade=" + cidadeTexto.Text + "&UF= " + estadoTexto.Text + "&telefone=" + foneTexto.Text + "&celular=" + celularTexto.Text);
+                var text = n.DownloadString("http://localhost:8081/?comandosql=&idusuario_soa=" + idTexto.Text + "&nome=" + nomeTexto.Text + "&data_nasc=" + nascimentoTexto.Text + "&endereco=" + enderecoTexto.Text + "&numero_end=" + numEndTexto.Text + "&end_complemento=" + endCompTexto.Text + "&cep=" + cepTexto.Text + "&cidade=" + cidadeTexto.Text + "&UF= " + estadoTexto.Text + "&telefone=" + foneTexto.Text + "&celular=" + celularTexto.Text);
                 //convertendo pra string just in case
                 string valorOriginal = Convert.ToString(text);
                 //debug
                 Console.WriteLine(valorOriginal);
+                debugBox.Text = valorOriginal;
+                //Se retornar 1 - Message Box Dizendo que inseriu com sucesso e Limpa Campos
+                if (valorOriginal == "1")
+                {
+                    MessageBox.Show("Usuario Inserido");
+                    LimparCampos();
+                }
+                else {
+                    MessageBox.Show("Erro");
+                }
             }
+        }
+
+        private void limpaBotao_Click_1(object sender, EventArgs e)
+        {
+            LimparCampos();
+            debugBox.Text = "";
         }
     }
 }
